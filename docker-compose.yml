@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8002:8002"
+    # NOVO: Política de reinicialização
+    restart: unless-stopped
+    volumes:
+      - db_data_encurtador:/app/data
+
+volumes:
+  db_data_encurtador:
