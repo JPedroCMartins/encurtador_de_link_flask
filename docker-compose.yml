@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+    container_name: encurtador-link
+    ports:
+      - "8004:5004"
+    volumes:
+      - ./data:/app/instance
+    restart: unless-stopped

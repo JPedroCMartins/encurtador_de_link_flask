@@ -31,5 +31,4 @@ Thumbs.db
 docker-compose.override.yml
 
 # --- Arquivos de Configuração Local ---
-data
-data/
+database.db
