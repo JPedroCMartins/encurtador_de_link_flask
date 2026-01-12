@@ -12,6 +12,6 @@ RUN uv sync --frozen --no-cache
 
 COPY . .
 
-EXPOSE 5004
+EXPOSE 5005
 
-CMD ["uv", "run", "gunicorn", "--workers", "3", "--bind", "0.0.0.0:5004", "main:app"]
+CMD ["uv", "run", "gunicorn", "--workers", "3", "--bind", "0.0.0.0:5005", "main:app"]

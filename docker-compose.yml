@@ -6,7 +6,7 @@ services:
       context: .
     container_name: encurtador-link
     ports:
-      - "8004:5004"
+      - "8005:5005"
     volumes:
       - ./data:/app/data
     restart: unless-stopped
