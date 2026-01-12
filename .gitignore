@@ -29,3 +29,7 @@ Thumbs.db
 
 # --- Docker ---
 docker-compose.override.yml
+
+# --- Arquivos de Configuração Local ---
+data
+data/
