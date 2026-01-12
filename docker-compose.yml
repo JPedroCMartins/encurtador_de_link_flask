@@ -8,5 +8,5 @@ services:
     ports:
       - "8004:5004"
     volumes:
-      - ./data:/app/instance
+      - ./data:/app/data
     restart: unless-stopped
