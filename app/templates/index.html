@@ -5,30 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encurtador de Links</title>
     <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; text-align: center; background-color: #f9f9f9; }
-        h1 { color: #333; }
-        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        input { padding: 12px; width: 65%; border: 1px solid #ddd; border-radius: 4px; }
-        button { padding: 12px 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; font-weight: bold; }
-        button:hover { background-color: #0056b3; }
-        .result { margin-top: 20px; padding: 15px; background: #e9ecef; border: 1px solid #ced4da; border-radius: 4px; color: #495057; }
-        a { color: #007bff; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+        }
+        .container {
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 { 
+            color: #2d3748; 
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        form { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+        }
+        input { 
+            padding: 14px 16px; 
+            width: 100%; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 8px; 
+            font-size: 16px;
+            transition: border-color 0.2s ease;
+            outline: none;
+        }
+        input:focus {
+            border-color: #4299e1;
+        }
+        button { 
+            padding: 14px 20px; 
+            cursor: pointer; 
+            background-color: #4299e1; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            font-size: 16px;
+            transition: background-color 0.2s ease, transform 0.1s ease; 
+        }
+        button:hover { 
+            background-color: #3182ce; 
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .result { 
+            margin-top: 24px; 
+            padding: 20px; 
+            background: #ebf8ff; 
+            border: 1px solid #bee3f8; 
+            border-radius: 8px; 
+            color: #2c5282; 
+        }
+        .result p {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+        a { 
+            color: #3182ce; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 18px;
+            word-break: break-all;
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
     </style>
 </head>
 <body>
-    <h1>Encurtador de Links</h1>
-    
-    <form method="POST">
-        <input type="url" name="url" placeholder="Cole seu link longo aqui..." required>
-        <button type="submit">Encurtar</button>
-    </form>
+    <div class="container">
+        <h1>Encurtador de Links</h1>
+        
+        <form method="POST">
+            <input type="url" name="url" placeholder="Cole seu link longo aqui..." required>
+            <button type="submit">Encurtar</button>
+        </form>
 
-    {% if short_url %}
-        <div class="result">
-            <p>Seu link curto:</p>
-            <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
-        </div>
-    {% endif %}
+        {% if short_url %}
+            <div class="result">
+                <p>Seu link curto:</p>
+                <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>
