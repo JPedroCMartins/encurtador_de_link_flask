@@ -1,4 +1,4 @@
-# 🔗 Encurtador de Links (Flask + UV)
+
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-Framework-black?logo=flask&logoColor=white)
@@ -10,7 +10,7 @@ Aplicação web desenvolvida em **Flask** para encurtamento de URLs. O projeto f
 
 O gerenciamento de dependências é feito com `uv`, garantindo builds extremamente rápidos.
 
-## 🛠️ Tecnologias Utilizadas
+
 
 - **Backend:** Python 3.11, Flask, SQLAlchemy.
 - **Banco de Dados:** SQLite (com persistência via volumes Docker).
@@ -18,16 +18,16 @@ O gerenciamento de dependências é feito com `uv`, garantindo builds extremamen
 - **Gerenciamento de Pacotes:** [uv](https://github.com/astral-sh/uv).
 - **Infraestrutura:** Docker e Docker Compose.
 
-## ✨ Funcionalidades
+
 
 - ✂️ **Encurtamento:** Gera códigos únicos de 6 caracteres.
 - ⏳ **Expiração Automática:** Links são deletados automaticamente 24 horas após a criação (Lazy Deletion).
 - 🐳 **Containerização:** Ambiente isolado e pronto para produção.
 - 💾 **Persistência:** Dados salvos na pasta local `./data`.
 
-## 🚀 Como Rodar
 
-### Opção 1: Docker (Recomendado)
+
+
 
 Esta é a forma mais simples, pois não requer instalação do Python ou `uv` na sua máquina local.
 
